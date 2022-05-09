@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --orange-primary-color: #E88D0E;
+  --brown-primary-color: #231f20;
+}
+
+body {
+  font-family: 'inter', sans-serif;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px 5px;
+  position: sticky;
+  top: 0;
+}
+
+.header nav li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--brown-primary-color);
+}
+
+.header nav a:hover {
+  border-bottom: 3px solid var(--brown-primary-color);
+
+}
+
+.header img {
+  width: 6vw;
+  border: 4px solid var(--orange-primary-color);
+  border-radius: 50%;
+}
+
+.header button {
+  background-color: var(--orange-primary-color);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.header button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Hidelinks menu*/
+.hide-links a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--brown-primary-color);
+}
+
+.hide-links {
+  display: none;
+  height: 100vh;
+}
+
+.menu {
+  display: none;
+}
+
+/* Showcase area */
+.showcase {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/showcase-img.jpg');
+  background-size: cover;
+  height: 100vh;
+  box-shadow: inset 0 0 0 2000px rgba(35, 31, 32, 0.5);
+  color: white;
+  font-size: 30px;
+}
+
+.showcase span {
+  color: var(--brown-primary-color);
+}
+
+.showcase button {
+  padding: 10px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: transparent;
+  color: white;
+  border: 2px solid var(--orange-primary-color);
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.showcase button a {
+  text-decoration: none;
+  color: white;
+}
+
+.showcase button:nth-of-type(2) {
+  background-color: var(--orange-primary-color);
+  color: var(--brown-primary-color);
+}
+
+.showcase button:hover {
+  transform: scaleY(1.1);
+}
+
+
+@media (max-width: 798px) {
+
+  /* header */
+  .header {
+    justify-content: space-evenly;
+    position: relative;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .header button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .header img {
+    width: 50px;
+  }
+
+  /* Hide and show links */
+  .menu {
+    display: inline-block;
+  }
+
+  .hide-links.show-links {
+    display: inline-block;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-evenly;
+  }
+
+  .hide-links.show-links p {
+    border-bottom: 2px solid var(--orange-primary-color);
+    padding-bottom: 15px;
+  }
+
+  /* Showcase */
+  .showcase {
+    font-size: 20px;
+    padding: 0 30px;
+    text-align: center;
+    height: 60vh;
+  }
+}
