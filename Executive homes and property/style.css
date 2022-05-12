@@ -325,6 +325,11 @@ body {
   transform: scale(1.09);
 }
 
+.footer {
+  padding: 30px;
+  text-align: center;
+}
+
 @media (max-width: 798px) {
 
   /* header */
